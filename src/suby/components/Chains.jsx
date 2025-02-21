@@ -4,12 +4,14 @@ import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { FaRegArrowAltCircleLeft } from "react-icons/fa";
 import { MagnifyingGlass } from 'react-loader-spinner'
 import { Link } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom'
+
 
 const Chains = () => {
     const [vendorData, setVendorData] = useState([]);
     const [scrollPosition, setScrollPosition] = useState(0);
     const [loading, setLoading] = useState(true)
-
+    const data= useLoaderData()
     const vendorFirmHandler = async()=>{
             try {
                     const response = await fetch(`${API_URL}/vendor/all-vendors?order=desc`)
@@ -91,6 +93,8 @@ const handleScroll =(direction)=>{
                         <Link to={`/products/${item._id}/${item.firmName}`} className="link" key={item._id}>
                         <div className="firmImage">
                                     <img src= {`${API_URL}/uploads/${item.image}`} className='topimg'/>
+                                    {/* <img src={} alt='git'/> */}
+
                                 </div>
                         </Link>
                                </>
@@ -107,3 +111,4 @@ const handleScroll =(direction)=>{
 }
 
 export default Chains
+
