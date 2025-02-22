@@ -1,16 +1,16 @@
 import React from 'react'
-import LandingPage from './suby/pages/LandingPage'
 import { Routes, Route } from 'react-router-dom'
 
 import './App.css'
-import ProductMenu from './suby/components/ProductMenu.jsx'
+import MainPage from './folder/pages/MainPage.jsx'
+import Menu from './folder/components/Menu.jsx'
 
 const App = () => {
   return (
     <div>
       <Routes>
-          <Route path='/' element = { <LandingPage />} />
-          <Route path='/products' element = {<ProductMenu />} />
+          <Route path='/' element = { <MainPage />} />
+          <Route path='/products' element = {<Menu />} />
       </Routes>
     
     </div>

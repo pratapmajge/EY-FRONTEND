@@ -3,9 +3,9 @@ import TopBar from '../components/TopBar'
 import ItemsDisplay from '../components/ItemsDisplay'
 import Chains from '../components/Chains'
 import FirmCollections from '../components/FirmCollections'
-import ProductMenu from '../components/ProductMenu'
+import ProductMenu from '../components/Menu'
 
-const LandingPage = () => {
+const MainPage = () => {
   return (
     <div>
         <TopBar />
@@ -18,4 +18,4 @@ const LandingPage = () => {
   )
 }
 
-export default LandingPage
+export default MainPage

@@ -3,7 +3,7 @@ import { API_URL } from "../api";
 import { useParams } from "react-router-dom";
 import TopBar from "./TopBar";
 
-const ProductMenu = () => {
+const Menu = () => {
   const [products, setProducts] = useState([]);
 
   const { firmId, firmName } = useParams();
@@ -48,4 +48,4 @@ const ProductMenu = () => {
   );
 };
 
-export default ProductMenu;
+export default Menu;

@@ -11,7 +11,7 @@ const Chains = () => {
     const [vendorData, setVendorData] = useState([]);
     const [scrollPosition, setScrollPosition] = useState(0);
     const [loading, setLoading] = useState(true)
-    const data= useLoaderData()
+    // const data= useLoaderData()
     const vendorFirmHandler = async()=>{
             try {
                     const response = await fetch(`${API_URL}/vendor/all-vendors?order=desc`)
