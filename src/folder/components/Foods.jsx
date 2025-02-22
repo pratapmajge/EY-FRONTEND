@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { useLoaderData } from 'react-router-dom'
 
 
-const Chains = () => {
+const Foods = () => {
     const [vendorData, setVendorData] = useState([]);
     const [scrollPosition, setScrollPosition] = useState(0);
     const [loading, setLoading] = useState(true)
@@ -49,7 +49,7 @@ const handleScroll =(direction)=>{
 
 
   return (
-      <div className='mediaChainSection'>
+      <div className='mediaChainSection' >
   <div className="loaderSection">
   {loading && <>
         <div className="loader">
@@ -77,7 +77,7 @@ const handleScroll =(direction)=>{
         <FaRegArrowAltCircleRight className='btnIcons'/>
         </button>
       </div>
-            <h3 className='chainTitle'>Top restaurant chains in Pune</h3>
+            <h3 className='chainTitle' style={{color:"orange"}}>Top restaurant chains in Pune</h3>
         <section className="chainSection" id="chainGallery" onScroll={(e)=>setScrollPosition(e.target.scrollf)}>
             {vendorData.vendors && vendorData.vendors.map((vendor)=>{
                    return(
@@ -110,5 +110,5 @@ const handleScroll =(direction)=>{
   )
 }
 
-export default Chains
+export default Foods
 

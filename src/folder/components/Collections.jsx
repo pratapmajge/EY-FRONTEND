@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { API_URL } from "../api";
 import { Link } from "react-router-dom";
 
-const FirmCollections = () => {
+const Collections = () => {
   const [firmData, setFirmData] = useState([]);
   const [selectedRegion, setSelectedRegion] = useState('All');
   const [activeCategory, setActiveCategory]= useState('all');
@@ -29,7 +29,7 @@ const FirmCollections = () => {
 
   return (
     <>
-      <h3>Restaurants with online food delivery in Hyderabad</h3>
+      <h3 style={{color:"orange"}}>Restaurants with online food delivery in Hyderabad</h3>
       <div className="filterButtons">
         <button onClick={() => filterHandler("All", 'all')} className={activeCategory === 'all' ? 'activeButton': ''}>All</button>
         <button onClick={() => filterHandler("South-Indian" , 'south-indian')} className={activeCategory === 'south-indian' ? 'activeButton': ''} >South-Indian</button>
@@ -45,7 +45,7 @@ const FirmCollections = () => {
             ){
                 return (
                   <Link to={`/products/${item._id}/${item.firmName}`} className="link" key={item._id}>
-   <div className="zoomEffect">
+   <div className="zoomEffect" style={{backgroundColor:"#282C23 " , color:"bisque"}}>
    <div className="firmGroupBox">
                       <div className="firmGroup">
                         <img src={`${API_URL}/uploads/${item.image}`} alt={item.firmName} />
@@ -70,4 +70,4 @@ const FirmCollections = () => {
   );
 };
 
-export default FirmCollections;
+export default Collections;

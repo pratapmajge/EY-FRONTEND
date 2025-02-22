@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { itemData } from '../data'
 
-const ItemsDisplay = () => {
+const Display = () => {
     const [displayItem, setDisplayItem] = useState(itemData)
 
 
@@ -18,4 +18,4 @@ const ItemsDisplay = () => {
   )
 }
 
-export default ItemsDisplay
+export default Display

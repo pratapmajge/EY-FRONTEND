@@ -1,9 +1,9 @@
 import React from 'react'
 import TopBar from '../components/TopBar'
-import ItemsDisplay from '../components/ItemsDisplay'
-import Chains from '../components/Chains'
-import FirmCollections from '../components/FirmCollections'
-import ProductMenu from '../components/Menu'
+import ItemsDisplay from '../components/Display'
+import Chains from '../components/Foods'
+import FirmCollections from '../components/Collections'
+import Menu from '../components/Menu'
 
 const MainPage = () => {
   return (
